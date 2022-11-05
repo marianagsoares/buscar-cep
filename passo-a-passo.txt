@@ -1,7 +1,7 @@
 1 - Criação do projeto
 1.1 - Rodar comando ng new buscar-cep no terminal (Esperar instalação das dependencias ser concluida)
 1.2 - Acessar no terminal a pasta projeto criado atraves do comando: cd buscar-cep
-1.3 - Abrir pasta no vscode via terminal atraves do comando code.
+1.3 - Abrir pasta no vscode via terminal atraves do comando: code .
 
 2 - Criação do repositorio
 git init 
@@ -14,9 +14,32 @@ git push -u origin main
 3.1 - Rodar comando ng add @angular/material
 3.2 - Gerar modulo para importar componentes do material
     3.2.1 - ng generate module material (ng generate module nome-do-modulo)
-    3.2.2 - Importar modulos do material que serão utilizados na aplicação
-3.3 - add/commit/push das alterações
+    3.2.2 - Importar modulos do material que serão utilizados na aplicação https://gist.github.com/renato3x/97578568141c5d27275084de2e12f864
+3.3 - Importar MaterialModule no app.module.ts
+3.4 - add/commit/push das alterações
 
+4 - Gerar serviço para consumir API
+4.1 - Rodar comando ng generate service services/via-cep
 
+5 - Estrutura HTML && TS
+5.1 - Utilizar componentes Material no HTML
+
+5.2 - Criar metodo no HTML e no TS para submeter o formulario e conecta-los atraves do (ngSubmit).
+
+5.3 Para utilizar formGroup e o FormBiulder é preciso importar o ReactiveFormsModule no app.module.ts
+
+5.4 - Sem o FormBuilder não é possivel fazer o formulario, por isso é preciso criar um construtor no app.component.ts e injetar o formBuilder FormBuilder
+
+5.5 - Criar variavel formulario do tipo FormGroup no TS utilizando o metodo group da classe FormBuilder. group é metodo da classe FormBuilder que acessamos pelo this.formBuilder e que recebe um objeto com os inputs do nosso formulario, seu valor inicial e suas validacoes
+
+5.6 - precisamos criar o vinculo entre o input do formulario TS e o input do formulario HTML através do formControlName
+
+5.7 - No HTML precisamos criar o vinculo entre o formulario TS e o formulario HTML através do [formGroup]
+
+5.8 - Dentro do método procurar do TS, devemos buscar o valor do input do formulario, se ele existir, retornar o valor dele
+
+5.9 - Imprimir no console o que foi submetido no formulario
+
+5.10 - add/commit/push
 
 
