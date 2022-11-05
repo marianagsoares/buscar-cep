@@ -6,7 +6,17 @@
 2 - Criação do repositorio
 git init 
 git add -A
-git commit -m "primeiro commit" 
-git branch -M main 
-git remote add origin https://github.com/marianagsoares/buscar-cep. git
+git commit -m "Criação do repositorio" 
+git remote add origin https://github.com/marianagsoares/buscar-cep.git
 git push -u origin main
+
+3 - Instalar e configurar biblioteca do angular material
+3.1 - Rodar comando ng add @angular/material
+3.2 - Gerar modulo para importar componentes do material
+    3.2.1 - ng generate module material (ng generate module nome-do-modulo)
+    3.2.2 - Importar modulos do material que serão utilizados na aplicação
+3.3 - add/commit/push das alterações
+
+
+
+
