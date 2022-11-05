@@ -28,7 +28,7 @@ git push -u origin main
 
 5.3 Para utilizar formGroup e o FormBiulder é preciso importar o ReactiveFormsModule no app.module.ts
 
-5.4 - Sem o FormBuilder não é possivel fazer o formulario, por isso é preciso criar um construtor no app.component.ts e injetar o formBuilder FormBuilder
+5.4 - Sem o FormBuilder não é possivel fazer o formulario, por isso é preciso criar um construtor no app.component.ts e injetar o formBuilder: FormBuilder DENTRO DO CONSTRUTOR
 
 5.5 - Criar variavel formulario do tipo FormGroup no TS utilizando o metodo group da classe FormBuilder. group é metodo da classe FormBuilder que acessamos pelo this.formBuilder e que recebe um objeto com os inputs do nosso formulario, seu valor inicial e suas validacoes
 
@@ -42,4 +42,13 @@ git push -u origin main
 
 5.10 - add/commit/push
 
+6 - Consumir API do ViaCep
+
+6.1 Dentro da classe configurar a baseUrl da API de onde virao os dados "https://viacep.com.br/ws"
+
+6.2 - Sem o HttpClient não é possivel fazer as requisições http, por isso é preciso criar um construtor no via-cep.service.ts e injetar o http: HttpClient DENTRO DO CONSTRUTOR
+
+6.3 Criar método que vai consumir a API e retornar os dados através do método get do this.http que recebe como parametro a url completa da API. 
+
+6.4 Criar uma interface para especificar para minha aplicação o que será retornado pelo método buscarCep e dizer o tipo do retorno no arquivo service.ts
 
