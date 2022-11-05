@@ -26,7 +26,7 @@ git push -u origin main
 
 5.2 - Criar metodo no HTML e no TS para submeter o formulario e conecta-los atraves do (ngSubmit).
 
-5.3 Para utilizar formGroup e o FormBiulder é preciso importar o ReactiveFormsModule no app.module.ts
+5.3 Para utilizar formGroup e o FormBuilder é preciso importar o ReactiveFormsModule no app.module.ts
 
 5.4 - Sem o FormBuilder não é possivel fazer o formulario, por isso é preciso criar um construtor no app.component.ts e injetar o formBuilder: FormBuilder DENTRO DO CONSTRUTOR
 
@@ -46,9 +46,24 @@ git push -u origin main
 
 6.1 Dentro da classe configurar a baseUrl da API de onde virao os dados "https://viacep.com.br/ws"
 
-6.2 - Sem o HttpClient não é possivel fazer as requisições http, por isso é preciso criar um construtor no via-cep.service.ts e injetar o http: HttpClient DENTRO DO CONSTRUTOR
+6.2 Para utilizar HttpClient é preciso importar o HttpClientModule no app.module.ts
 
-6.3 Criar método que vai consumir a API e retornar os dados através do método get do this.http que recebe como parametro a url completa da API. 
+6.3 - Sem o HttpClient não é possivel fazer as requisições http, por isso é preciso criar um construtor no via-cep.service.ts e injetar o http: HttpClient DENTRO DO CONSTRUTOR
 
-6.4 Criar uma interface para especificar para minha aplicação o que será retornado pelo método buscarCep e dizer o tipo do retorno no arquivo service.ts
+6.4 - Criar método que vai consumir a API e retornar os dados através do método get do this.http que recebe como parametro a url completa da API. 
 
+6.5 - Criar uma interface para especificar para minha aplicação o que será retornado pelo método buscarCep e dizer o tipo do retorno no arquivo service.ts
+
+7 - Integração do service com o TS
+
+7.1 Sem o ViaCepService que esta no service não é possivel utilizar o método buscarCep dentro do TS, por isso é preciso injetar a classe ViaCepService dentro do TS. DENTRO DO CONSTRUTOR
+
+7.2 Dentro do método procurar do TS, chamar o método buscarCep do service atraves do this.viaCepService, passando o cep como parâmetro. Alem disso, chamar a funcao subscribe que recebe uma arrow function como parametro e essa arrow function tem o endereco retornado pelo servico como parametro
+
+this.viaCepService.buscarCep()
+this.viaCepService.buscarCep(valorInputCep)
+this.viaCepService.buscarCep(valorInputCep).subscribe()
+this.viaCepService.buscarCep(valorInputCep).subscribe(() => {})
+this.viaCepService.buscarCep(valorInputCep).subscribe((enderecoRetornado) => {})
+
+7.3 Criar variavel do tipo IEndereco no TS e utilizar o ! para que nao precisemos inicializar e ela nao possa ser null ou undefined. Por fim, igualar ao endereco retornado pelo servico

@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { ICep } from '../interfaces';
+import { IEndereco } from '../interfaces';
 
 @Injectable({
   providedIn: 'root'
@@ -12,6 +12,6 @@ export class ViaCepService {
   private readonly baseUrl: string = "https://viacep.com.br/ws"
 
   buscarCep(cep: string) {
-    return this.http.get<ICep>(`${this.baseUrl}/${cep}/json`)
+    return this.http.get<IEndereco>(`${this.baseUrl}/${cep}/json`)
   }
 }

@@ -1,4 +1,4 @@
-export interface ICep {
+export interface IEndereco {
     cep: string
     logradouro: string
     complemento: string
