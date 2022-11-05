@@ -1,0 +1,12 @@
+1 - Criação do projeto
+1.1 - Rodar comando ng new buscar-cep no terminal (Esperar instalação das dependencias ser concluida)
+1.2 - Acessar no terminal a pasta projeto criado atraves do comando: cd buscar-cep
+1.3 - Abrir pasta no vscode via terminal atraves do comando code.
+
+2 - Criação do repositorio
+git init 
+git add -A
+git commit -m "primeiro commit" 
+git branch -M main 
+git remote add origin https://github.com/marianagsoares/buscar-cep. git
+git push -u origin main
