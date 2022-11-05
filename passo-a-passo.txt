@@ -75,3 +75,9 @@ this.viaCepService.buscarCep(valorInputCep).subscribe((enderecoRetornado) => {})
 8.1 - no HTML chame a condicional ngIf para mostrar o resultado na busca somente se a variavel que retorna o endereco apresentar um valor diferente de undefined.
 
 8.2 chame no HTML cada item retornado pela busca utilizando o {{}}
+
+9 - Exibir erro em caso de CEP inválido
+
+9.1 - Importar o SnackBar no app.component.ts
+
+9.2 Dentro da arrow function criar a condicional que vai verificar se existe erro. Se existir, abra na tela o SnackBar, senao mostre as infomações que foram retornadas da API.

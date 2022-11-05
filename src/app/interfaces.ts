@@ -9,4 +9,5 @@ export interface IEndereco {
     gia: string
     ddd: string
     siafi: string
+    erro: boolean
 }
