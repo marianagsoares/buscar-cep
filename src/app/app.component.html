@@ -1,28 +1,30 @@
+<!--5.1-->
 <main>
-  <section>
+  <div class="content">
+    <!--5.7-->
     <form (ngSubmit)="procurar()" [formGroup]="formulario">
+      <img src="../assets/logo.png" alt="">
       <mat-form-field hintLabel="Max 8 caracteres" appearance="outline">
         <mat-label>CEP</mat-label>
+        <!--5.6-->
         <input matInput #input maxlength="8" placeholder="Digite o número do CEP" formControlName="inputCep">
         <mat-hint align="end">{{input.value.length || 0}}/8</mat-hint>
       </mat-form-field>
-      <button>
+      <button class="search-button">
         <mat-icon>search</mat-icon>
       </button>
     </form>
-  </section>
-  <section>
-      <div *ngIf="endereco != undefined">
-        <p>{{endereco.cep}}</p>
-        <p>{{endereco.logradouro}}</p>
-        <p>{{endereco.complemento}}</p>
-        <p>{{endereco.bairro}}</p>
-        <p>{{endereco.localidade}}</p>
-        <p>{{endereco.uf}}</p>
-        <p>{{endereco.ibge}}</p>
-        <p>{{endereco.gia}}</p>
-        <p>{{endereco.ddd}}</p>
-        <p>{{endereco.siafi}}</p>
+    <!--8.1-->
+      <div *ngIf="endereco != undefined" class="return-itens">
+        <button class="close-button" (click)="apagar()">
+          <mat-icon>close</mat-icon>
+        </button>
+        <!--8.2-->
+        <p>CEP: {{endereco.cep}}</p>
+        <p>UF: {{endereco.uf}}</p>
+        <p>Cidade:{{endereco.localidade}}</p>
+        <p>Bairro: {{endereco.bairro}}</p>
+        <p>Logradouro: {{endereco.logradouro}}</p>
       </div>
-  </section>
+  </div>
 </main>

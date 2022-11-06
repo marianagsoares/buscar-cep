@@ -58,15 +58,16 @@ git push -u origin main
 
 7.1 - Sem o ViaCepService que esta no service não é possivel utilizar o método buscarCep dentro do TS, por isso é preciso injetar a classe ViaCepService dentro do TS. DENTRO DO CONSTRUTOR
 
-7.2 - Dentro do método procurar do TS, chamar o método buscarCep do service atraves do this.viaCepService, passando o cep como parâmetro. Alem disso, chamar a funcao subscribe que recebe uma arrow function como parametro e essa arrow function tem o endereco retornado pelo servico como parametro
+7.2 -  Criar variavel do tipo IEndereco no TS e utilizar o ! para que nao precisemos inicializar e ela nao possa ser null ou undefined. Por fim, igualar ao endereco retornado pelo servico
+
+
+7.3 - Dentro do método procurar do TS, chamar o método buscarCep do service atraves do this.viaCepService, passando o cep como parâmetro. Alem disso, chamar a funcao subscribe que recebe uma arrow function como parametro e essa arrow function tem o endereco retornado pelo servico como parametro
 
 this.viaCepService.buscarCep()
 this.viaCepService.buscarCep(valorInputCep)
 this.viaCepService.buscarCep(valorInputCep).subscribe()
 this.viaCepService.buscarCep(valorInputCep).subscribe(() => {})
 this.viaCepService.buscarCep(valorInputCep).subscribe((enderecoRetornado) => {})
-
-7.3 -  Criar variavel do tipo IEndereco no TS e utilizar o ! para que nao precisemos inicializar e ela nao possa ser null ou undefined. Por fim, igualar ao endereco retornado pelo servico
 
 7.4 Exibir endereço no console
 

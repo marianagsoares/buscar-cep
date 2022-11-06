@@ -1,3 +1,4 @@
+//6.5
 export interface IEndereco {
     cep: string
     logradouro: string
